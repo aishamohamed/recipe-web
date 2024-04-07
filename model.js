@@ -1,7 +1,7 @@
 //Defines the schema for your recipes and interacts with the MongoDB database using Mongoose.
 
 // Import mongoose
-const Mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 // Define a schema
 const recipeSchema = new mongoose.Schema({
