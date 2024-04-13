@@ -2,18 +2,149 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Book</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Welcome to My Recipe Book</h1>
-    </header>
-    <main>
-      <p>This page will display a collection of recipes.</p>
-    </main>
-    <footer>
-      <p>© 2024 Recipe Book</p>
-    </footer>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Recipe Book</h1>
+
+    <section id="home">
+      <h1>Welcome to Our Recipe Book</h1>
+      <p>
+        Welcome to the ultimate culinary destination where flavors meet
+        creativity. Our Recipe Book is your perfect kitchen companion, offering
+        a rich collection of delicious recipes that cater to all tastes and
+        occasions. Whether you're a beginner looking to learn the basics or an
+        experienced chef seeking inspiration, our diverse and meticulously
+        curated recipes are designed to guide you step by step towards creating
+        unforgettable meals.
+      </p>
+      <p>
+        Explore traditional classics, modern twists, and everything in between.
+        Each recipe is accompanied by detailed instructions, ingredient lists,
+        and expert tips to ensure you not only achieve the perfect dish but also
+        enjoy the journey of making it. So, grab your apron, and let's start
+        cooking!
+      </p>
+    </section>
+
+    <section id="recipes">
+      <h2>Recipes</h2>
+      <!-- Recipes will be displayed here -->
+      <div id="recipe-table"></div>
+      <!-- Update Recipe Form (hidden by default, shown when needed) -->
+      <div id="update-form" style="display: none">
+        <h2>Update Recipe</h2>
+        <form id="edit-recipe-form">
+          <input type="hidden" id="update-id" />
+          <input type="text" id="update-title" placeholder="Title" required />
+          <input
+            type="text"
+            id="update-ingredients"
+            placeholder="Ingredients"
+            required
+          />
+          <input
+            type="text"
+            id="update-instructions"
+            placeholder="Instructions"
+            required
+          />
+          <input
+            type="number"
+            id="update-cookingTime"
+            placeholder="Cooking Time"
+            required
+          />
+          <button type="submit">Update Recipe</button>
+        </form>
+      </div>
+      <h2>Add Recipe</h2>
+      <!-- Add Recipe Form -->
+      <form id="add-recipe-form">
+        <input type="text" id="add-title" placeholder="Title" required />
+        <input
+          type="text"
+          id="add-ingredients"
+          placeholder="Ingredients (comma separated)"
+          required
+        />
+        <input
+          type="text"
+          id="add-instructions"
+          placeholder="Instructions"
+          required
+        />
+        <input
+          type="number"
+          id="add-cookingTime"
+          placeholder="Cooking Time (in minutes)"
+          required
+        />
+        <button type="submit">Add Recipe</button>
+      </form>
+    </section>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Welcome to Our Recipe Book, your new home for culinary inspiration!
+        Founded by a team of passionate chefs and home cooks, our mission is to
+        empower individuals of all skill levels to explore the art of cooking.
+        We believe that cooking should be accessible, enjoyable, and above all,
+        fun!
+      </p>
+      <p>
+        Our platform offers a diverse range of recipes, from traditional dishes
+        that have been passed down through generations to contemporary meals
+        that cater to busy lifestyles. Each recipe is carefully tested and comes
+        with step-by-step instructions to ensure you can recreate delicious
+        dishes in your own kitchen.
+      </p>
+      <p>
+        At Our Recipe Book, we celebrate the universal appeal of cooking and the
+        unique connections it fosters. Join our community of food lovers and
+        start creating your culinary masterpieces today!
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>
+        Have questions or feedback? Our team is ready to help! Here's how you
+        can reach us:
+      </p>
+      <ul>
+        <li>
+          Email:
+          <a href="mailto:support@ourrecipebook.com"
+            >support@ourrecipebook.com</a
+          >
+        </li>
+        <li>Phone: <a href="tel:+1234567890">+1 234 567 890</a></li>
+        <li>
+          Follow us on
+          <a href="https://www.instagram.com/ourrecipebook" target="_blank"
+            >Instagram</a
+          >
+          and
+          <a href="https://www.facebook.com/ourrecipebook" target="_blank"
+            >Facebook</a
+          >
+        </li>
+      </ul>
+      <p>
+        We look forward to hearing from you and are excited to see what you'll
+        cook up next!
+      </p>
+    </section>
+    <script src="script.js"></script>
   </body>
 </html>
