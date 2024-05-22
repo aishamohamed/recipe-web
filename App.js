@@ -31,13 +31,14 @@ mongoose.connect(CONNECTION_URL)
     .then(() => console.log("Connected to MongoDB!"))
     .catch(err => console.error("Error connecting to MongoDB:", err));
 
-// Middleware to serve static files (like index.html)
+// path.join() joins together the supllied path segments
+// Middleware to serve static files (like index.html), takes in the name of the directory to serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Send index.html when the root route ('/') is requested
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
+    res.sendFile('index.html');
 });
 
 

@@ -50,8 +50,8 @@ router.post('/api/recipes', async (req, res) => {
 
 // PUT update a recipe
 router.put('/api/recipes/:id', async (req, res) => {
-    console.log('Received PUT request for ID:', req.params.id); // Server-side log
-    console.log('Update data:', req.body);  // Log data received to update
+    //console.log('Received PUT request for ID:', req.params.id); // Server-side log
+    //console.log('Update data:', req.body);  // Log data received to update
     try {
         const recipe = await Recipe.findById(req.params.id);
         if (!recipe) {

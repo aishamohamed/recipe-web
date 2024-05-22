@@ -64,9 +64,9 @@ function displayRecipes(recipes) {
         `;
 
         // Create and append action buttons for updating and deleting recipes
-        const actionsCell = row.insertCell();
-        actionsCell.appendChild(createButton('Update', () => showUpdateForm(recipe._id)));
-        actionsCell.appendChild(createButton('Delete', () => deleteRecipe(recipe._id)));
+        const actionsBTN = row.insertCell();
+        actionsBTN.appendChild(createButton('Update', () => showUpdateForm(recipe._id)));
+        actionsBTN.appendChild(createButton('Delete', () => deleteRecipe(recipe._id)));
     });
 
     // Clear existing content and add the newly created table to the page
@@ -138,7 +138,7 @@ function submitUpdate(updatedRecipe, id) {
         }
         return response.json();  // Parse JSON response
     })
-    .then(data => {
+    .then(() => {
         fetchRecipes(); // Refresh the recipe list
         document.getElementById('update-form').style.display = 'none'; // Hide the update form
     })
@@ -151,7 +151,7 @@ function submitUpdate(updatedRecipe, id) {
 function deleteRecipe(id) {
     if (confirm('Are you sure you want to delete this recipe?')) { // Confirm before deleting
         fetch(`http://localhost:5000/api/recipes/${id}`, {
-            method: 'DELETE' // HTTP method
+            method: 'DELETE' // Set HTTP method
         })
         .then(() => {
             fetchRecipes();  // Refresh the recipe list

@@ -1,4 +1,4 @@
-//Defines the schema for your recipes and interacts with the MongoDB database using Mongoose.
+//Defines the schema for the recipes and interacts with the MongoDB database using Mongoose.
 
 // Import mongoose
 const mongoose = require('mongoose');
@@ -9,15 +9,15 @@ const recipeSchema = new mongoose.Schema({
     id: mongoose.Schema.Types.ObjectId, // Unique identifier for each recipe
     title: {
         type: String,
-        required: true // This field is mandatory
+        required: true 
     },
     ingredients: {
-        type: [String], // Array of strings for the ingredients list
+        type: [String], 
         required: true
     },
     instructions: {
         type: String,
-        required: true // Instructions are also mandatory
+        required: true
     },
     cookingTime: {
         type: Number, // Time in minutes
